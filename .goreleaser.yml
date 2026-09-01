@@ -1,0 +1,17 @@
+version: 2
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - main: ./cmd/sr
+    ldflags:
+      - -X main.version={{.Version}}
+    env:
+      - CGO_ENABLED=0
+    # sr replaces itself with the wrapped command, which has no equivalent on
+    # Windows.
+    goos:
+      - darwin
+      - linux
+checksum:
+  name_template: "checksums.txt"
