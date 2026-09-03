@@ -23,7 +23,7 @@ Download an archive for your platform from the
 binary somewhere on your `PATH`:
 
 ```
-tar xzf sr_Darwin_arm64.tar.gz
+tar xzf sr_...tar.gz
 install sr /usr/local/bin/
 ```
 
